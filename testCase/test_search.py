@@ -59,8 +59,8 @@ class TestSearch(unittest.TestCase):
         self.assertNotEqual(1,2, "1 != 2")
 
 class TestSearch1(unittest.TestCase):
-    def test_search3(self):
-        print("test_search3")
+    def test_search4(self):
+        print("test_search4")
 
 
 if __name__ == '__main__':
@@ -74,6 +74,6 @@ if __name__ == '__main__':
 
     # 方法三，执行某个测试类，将测试类添加到测试套件里面，批量执行测试类
     suite2 = unittest.TestLoader().loadTestsFromTestCase(TestSearch)
-    suite3 = unittest.TestLoader().loadTestsFromTestCase(TestSearch)
+    suite3 = unittest.TestLoader().loadTestsFromTestCase(TestSearch1)
     suite = unittest.TestSuite([suite2,suite3])
     unittest.TextTestRunner(verbosity=2).run(suite)
