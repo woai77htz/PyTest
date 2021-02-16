@@ -60,4 +60,7 @@ class TestSearch(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+    suite = unittest.TestSuite()
+    suite.addTest(TestSearch("test_search1"))
+    unittest.TextTestRunner().run(suite)
