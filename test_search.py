@@ -58,11 +58,15 @@ class TestSearch(unittest.TestCase):
     def test_notequql(self):
         self.assertNotEqual(1,2, "1 != 2")
 
+class TestSearch1(unittest.TestCase):
+    def test_search3(self):
+        print("test_search3")
+
 
 if __name__ == '__main__':
-    # 方法一，执行当前文件所有unittest测试用例
+    # 方法一，执行当前文件所有unittest测试用例，全部执行
     # unittest.main()
-    # 方法二，执行指定 测试用例，将要执行的测试用例添加到测试套件里面，批量执行
+    # 方法二，执行指定 测试用例，将要执行的测试用例添加到测试套件里面，批量执行测试方法
     # 创建一个测试套件， testsuite
     # suite = unittest.TestSuite()
     # suite.addTest(TestSearch("test_search1"))
@@ -70,5 +74,6 @@ if __name__ == '__main__':
 
     # 方法三，执行某个测试类，将测试类添加到测试套件里面，批量执行测试类
     suite2 = unittest.TestLoader().loadTestsFromTestCase(TestSearch)
+    suite3 = unittest.TestLoader().loadTestsFromTestCase(TestSearch)
     suite = unittest.TestSuite([suite2,suite3])
     unittest.TextTestRunner(verbosity=2).run(suite)
